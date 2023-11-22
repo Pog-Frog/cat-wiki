@@ -71,20 +71,15 @@ class Cat extends Model
                 env('THE_CAT_API_URL')
             );
 
-            // get all cat breeds and check if there is any error
             $response = $breedsService->getAllCatBreeds();
 
             if ($breedsService->error) {
-                // Return a response or throw an exception based on your requirements
                 return false;
             }
 
-            // get all breeds from the response
             $breeds = $response['data'];
 
-            // loop through all breeds
             foreach ($breeds as $breed) {
-                // create a new cat
                 $cat = new Cat([
                     'weight_imperial' => $breed['weight']['imperial'] ?? '',
                     'weight_metric' => $breed['weight']['metric'] ?? '',
@@ -130,13 +125,10 @@ class Cat extends Model
                     'imageUrl' => $breed['image']['url'] ?? '',
                 ]);
 
-                // save the cat
                 $cat->save();
             }
-            // Return a success response or any relevant information
             return true;
         } catch (\Exception $e) {
-            // Return an error response or throw the exception
             return false;
         }
     }

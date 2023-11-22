@@ -11,7 +11,7 @@ export const Header = () => {
   };
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative', marginTop: '1rem', marginBottom:'1rem' }}>
       <Link to='/'>
         <CatWikiLogo fill={'#291507'} />
       </Link>

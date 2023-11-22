@@ -14,7 +14,7 @@ class AdminController extends Controller
 
     public function dashboard()
     {
-        $cats = Cat::all();//return the cats to the view dashboard with status 200 to pass the test
+        $cats = Cat::all();
         return view('dashboard', compact('cats'));
     }
 
