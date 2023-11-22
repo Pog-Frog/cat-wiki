@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Instructor Login')
+@section('title', 'Admin Login')
 
 @section('content')
     <main class="page">
         <section class="clean-block clean-form dark">
             <div class="container">
                 <div class="block-heading">
-                    <h2 class="text-info">Instructor Signin</h2>
+                    <h2 class="text-info">Admin Login - Cat-Wiki</h2>
                 </div>
                 <form method="POST" action="{{ Route('loginPost') }}">
                     @csrf
