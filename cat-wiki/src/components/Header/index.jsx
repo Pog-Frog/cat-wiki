@@ -1,13 +1,25 @@
-import { Link } from 'react-router-dom'
-import { CatWikiLogo } from '../CatWikiLogo'
-import { HeaderContainer } from './styles'
+import { Link } from 'react-router-dom';
+import { CatWikiLogo } from '../CatWikiLogo';
 
 export const Header = () => {
+  const linkStyles = {
+    fontWeight: 500,
+    fontSize: '18px',
+    lineHeight: '22px',
+    color: '#291507',
+    textDecoration: 'none',
+  };
+
   return (
-    <HeaderContainer>
+    <div style={{ position: 'relative' }}>
       <Link to='/'>
         <CatWikiLogo fill={'#291507'} />
       </Link>
-    </HeaderContainer>
-  )
-}
+      <div style={{ position: 'absolute', top: '10px', right: '10px' }}>
+        <a href='http://127.0.0.1:8000/' target='_blank' style={linkStyles} rel="noreferrer">
+          <p>Admin Login</p>
+        </a>
+      </div>
+    </div>
+  );
+};
