@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Laravel\Sanctum\Sanctum;
 
+
 class AdminAuthController extends Controller
 {
     public function __construct()

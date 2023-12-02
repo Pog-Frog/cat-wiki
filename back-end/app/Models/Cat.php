@@ -9,6 +9,7 @@ use App\Services\TheCatAPIServices\BreedsService;
 class Cat extends Model
 {
     use HasFactory;
+    public $incrementing = false;
 
     protected $casts = [
         'id' => 'string',

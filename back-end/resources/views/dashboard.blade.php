@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Students')
+@section('title', 'Admin Panel')
 
 <script src="{{asset('js/jquery-3.6.3.min.js')}}"></script>
 <script src="{{asset('js/datatables.min.js')}}"></script>

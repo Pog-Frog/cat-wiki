@@ -10,7 +10,7 @@
                     <h1 class="h4">Add new breed</h1>
                 </div>
                 <div class="row">
-                    <form method="POST" id="questionForm" action="{{ Route('add_breed_post') }}">
+                    <form method="POST"  action="{{ Route('add_breed_post') }}">
                         @csrf
                         <div class="mb-3 col-8">
                             <label for="id" class="form-label">ID</label>

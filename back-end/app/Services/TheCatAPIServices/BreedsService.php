@@ -2,7 +2,6 @@
 
 namespace App\Services\TheCatAPIServices;
 
-use GuzzleHttp\Client;
 
 class BreedsService extends TheCatAPIService
 {

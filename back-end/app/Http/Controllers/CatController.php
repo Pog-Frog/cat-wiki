@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Cat;
 use App\Services\TheCatAPIServices\BreedsService;
 
+
 class CatController extends Controller
 {
     public function search(Request $request)
@@ -116,8 +117,6 @@ class CatController extends Controller
         if (!$cat) {
             return response()->json(['error' => 'Cat breed not found'], 404);
         }
-
-        $cat->searches = $cat->searches + 1;
         $cat->save();
         return response()->json($cat);
     }
